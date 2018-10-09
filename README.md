@@ -1,3 +1,11 @@
+===============
+================
+二维码扫描和条码扫描，扫描界面不同
+=============
+=====================
+
+
+
 QRCode
 ===
 [![JitPack](https://jitpack.io/v/XuDaojie/QRCode-Android.svg)](https://jitpack.io/#XuDaojie/QRCode-Android)
