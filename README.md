@@ -36,7 +36,9 @@ if (translateY >= CaptureActivity.bar_qcode_line) {  //tchl   670
 
 条码扫描时，点击返回按钮，会出现短暂的二维码扫描框的样式。这是因为创建view时用的是二维码扫描框的样式。
 
-修改的地方：ViewfindView.java onDraw()
+修改的地方：
+         ViewfindView.java onDraw()
+         
          frame = new Rect(leftOffset + RECT_OFFSET_X,
          
                     topOffset  + RECT_OFFSET_Y,
