@@ -2,6 +2,33 @@
 ================
 二维码扫描和条码扫描，扫描界面不同
 =============
+扫描线扫描范围修改：drawScanner（）
+
+translateY += 2f;
+ 
+if (translateY >= CaptureActivity.bar_qcode_line) {  //tchl   670
+            
+         translateY = 5f;
+                
+}
+         
+================================================
+
+扫描框大小修改：getFramingRect(). 
+
+如高度的修改
+
+ Log.i("tchl","!!!"+CaptureActivity.bar_qcode_rect)
+ 
+            if (height < MIN_FRAME_HEIGHT) {
+            
+                height = MIN_FRAME_HEIGHT/ CaptureActivity.bar_qcode_rect;
+                
+            } else if (height > MAX_FRAME_HEIGHT) {
+            
+                height = MAX_FRAME_HEIGHT/CaptureActivity.bar_qcode_rect;
+                
+            }
 =====================
 
 
