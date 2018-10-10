@@ -135,9 +135,10 @@ public final class ViewfinderView extends View {
             int leftOffset = (screenWidth - width) / 2;
             int topOffset = (screenHeight - height) / 2;
             frame = new Rect(leftOffset + RECT_OFFSET_X,
-                    topOffset + RECT_OFFSET_Y,
+                    topOffset  + RECT_OFFSET_Y,
                     leftOffset + width + RECT_OFFSET_X,
-                    topOffset + height + RECT_OFFSET_Y);
+                    (topOffset + height/CaptureActivity.bar_qcode_rect  + RECT_OFFSET_Y));//tchl
+
 //            return;
         }
         int width = canvas.getWidth();

@@ -220,7 +220,7 @@ public final class CameraManager {
      */
     public Rect getFramingRect(int offsetX, int offsetY) {
         Point screenResolution = configManager.getScreenResolution();
-        if (framingRect == null) {
+      /*  if (framingRect == null) {
             // 魅族等机型拒绝camera权限后screenResolution返回null
             if (screenResolution == null) {
                 return null;
@@ -276,7 +276,34 @@ public final class CameraManager {
                     leftOffset + width + offsetX,
                     topOffset + height + offsetY);
             Log.d(TAG, "Calculated framing rect: " + framingRect);
+        }*/
+
+        if (screenResolution == null) {
+            return null;
         }
+        if (camera == null) {
+            return null;
+        }
+        int width = screenResolution.x * 3 / 4;
+        if (width < MIN_FRAME_WIDTH) {
+            width = MIN_FRAME_WIDTH;
+        } else if (width > MAX_FRAME_WIDTH) {
+            width = MAX_FRAME_WIDTH;
+        }
+        int height = screenResolution.y * 3 / 4;
+        Log.i("tchl","*********"+CaptureActivity.bar_qcode_rect);
+        if (height < MIN_FRAME_HEIGHT) {
+            height = MIN_FRAME_HEIGHT;///CaptureActivity.bar_qcode_rect;// CaptureActivity.bar_qcode_rect;
+        } else if (height > MAX_FRAME_HEIGHT) {
+            height = MAX_FRAME_HEIGHT;///CaptureActivity.bar_qcode_rect;//CaptureActivity.bar_qcode_rect;
+        }
+        int leftOffset = (screenResolution.x - width) / 2;
+        int topOffset = (screenResolution.y - height) / 2;
+        framingRect = new Rect(leftOffset + offsetX,
+                topOffset + offsetY,
+                leftOffset + width + offsetX,
+                topOffset + height/CaptureActivity.bar_qcode_rect + offsetY); //tchl
+        Log.d(TAG, "Calculated framing rect: " + framingRect);
         return framingRect;
     }
 
