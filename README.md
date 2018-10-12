@@ -51,6 +51,14 @@ if (translateY >= CaptureActivity.bar_qcode_line) {  //tchl   670
 
 
 
+==============================================================================
+
+图片：
+(https://github.com/whtchl/qrcode_barcode/master/art/1.jpg)
+
+(https://github.com/whtchl/qrcode_barcode/master/art/2.jpg)
+==========================================================
+
 QRCode
 ===
 [![JitPack](https://jitpack.io/v/XuDaojie/QRCode-Android.svg)](https://jitpack.io/#XuDaojie/QRCode-Android)
