@@ -54,9 +54,10 @@ if (translateY >= CaptureActivity.bar_qcode_line) {  //tchl   670
 ==============================================================================
 
 图片：
-https://github.com/whtchl/qrcode_barcode/master/pic/1.jpg
+<img src="https://github.com/whtchl/qrcode_barcode/master/pic/1.jpg"/>
 
-https://github.com/whtchl/qrcode_barcode/master/pic/2.jpg
+<img src="https://github.com/whtchl/qrcode_barcode/master/pic/2.jpg"/>
+
 ==========================================================
 
 QRCode
